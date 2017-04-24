@@ -22,6 +22,9 @@ class ArticleController extends Controller
     public function get() {
         $id=request()->route("id");
         $category=Category::find($id);
-        return view ("article", ["category"=>$category]);
+        $article = Article::find($id);
+        return view ("article", ["category"=>$category,"article"=>$article]);
     }
+      
+    
 }

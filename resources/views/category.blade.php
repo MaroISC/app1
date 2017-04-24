@@ -38,6 +38,8 @@ function showarts(){
         $.get("<?php echo route("xhr.category.get", ["id" => $category->id]) ?>", function(data, status){
         for(var i=0;i<data.length;i++) {
         $("#list").append('<li><a href="/article"'+data[i].id+'">'+data.title+'</a></li>');
+        
+        
     }
 //        alert("Data: " + data + "\nStatus: " + status);
         });
